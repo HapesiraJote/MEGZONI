@@ -3,9 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>MIRË SE VINI</title>
+    
+    <title>MEGZONI | Fluturime dhe Shërbime nga Prishtina</title>
+    <meta name="description" content="Megzoni ofron fluturime direkte nga Prishtina drejt Gjermanisë dhe Zvicrës, rezervime hotelesh, përkthime dhe shërbime shëndetësore.">
+    <meta name="keywords" content="Elite Travel, fluturime Prishtine, bileta avioni, Gjermani, Zvicer, perkthime gjermanisht, rezervime hotelesh">
+    <meta name="author" content="Elite Travel">
+
+    <link rel="icon" type="image/png" href="https://i.ibb.co/fYmJZYyb/IMG-5454.png">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --led-blue: #00f2ff;
@@ -18,7 +26,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         body { background: #000; overflow-x: hidden; font-family: 'Orbitron', sans-serif; color: white; scroll-behavior: smooth; }
 
-        /* --- LOADING SCREEN (VIDEO RIKTHYER) --- */
+        /* --- LOADING SCREEN --- */
         #loader {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             z-index: 10000; display: flex; justify-content: center; align-items: center;
@@ -44,7 +52,6 @@
         /* --- MAIN CONTENT --- */
         .main-content { position: relative; z-index: 10; display: flex; flex-direction: column; align-items: center; width: 100%; }
 
-        /* Hapësira që aeroplani të shihet lirshëm në telefon */
         .hero-section {
             height: 65vh; 
             display: flex; flex-direction: column; justify-content: center; align-items: center;
@@ -59,10 +66,10 @@
             animation: softFade 4s infinite ease-in-out; line-height: 1.4;
         }
 
-        /* --- BUTTONS SECTION (Tani fillojnë më poshtë) --- */
+        /* --- CONTENT BLOCK --- */
         .content-block {
             width: 100%; padding: 40px 15px;
-            background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.9) 15%);
+            background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.95) 10%);
         }
 
         .btn-grid {
@@ -79,17 +86,20 @@
 
         .flight-btn:hover { background: rgba(0, 242, 255, 0.2); box-shadow: 0 0 20px var(--led-blue); transform: translateY(-3px); }
 
-        /* --- WHATSAPP ICON --- */
         .wa-icon {
             width: 35px; height: 35px; background: var(--wa-green); display: flex;
             justify-content: center; align-items: center; border-radius: 50%;
             font-size: 1.1rem; animation: glowMint 3s infinite alternate ease-in-out;
         }
 
-        @keyframes glowMint {
-            0% { background: var(--wa-green); box-shadow: 0 0 10px var(--wa-green); color: white; }
-            100% { background: var(--mint-blue); box-shadow: 0 0 15px var(--mint-blue); color: #003322; }
+        /* --- ABOUT US SECTION --- */
+        .about-section {
+            width: 100%; max-width: 900px; margin: 0 auto 60px auto;
+            text-align: center; padding: 40px 20px; background: rgba(255,255,255,0.03);
+            border-radius: 30px; border: 1px solid rgba(0, 242, 255, 0.2);
         }
+        .about-section h2 { color: var(--led-blue); margin-bottom: 20px; font-size: 1.5rem; text-transform: uppercase; }
+        .about-section p { line-height: 1.8; color: #ccc; font-family: sans-serif; font-size: 1rem; }
 
         /* --- SERVICES --- */
         .services-section {
@@ -100,9 +110,13 @@
 
         .services-header { text-align: center; margin-bottom: 40px; font-size: clamp(1rem, 4vw, 1.3rem); color: var(--led-blue); text-transform: uppercase; letter-spacing: 3px; }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; }
-        .service-card { background: rgba(255, 255, 255, 0.05); padding: 25px; border-radius: 20px; text-align: center; transition: 0.3s; }
+        .service-card { background: rgba(255, 255, 255, 0.05); padding: 25px; border-radius: 20px; text-align: center; }
         .service-card i { font-size: 2.2rem; color: var(--mint-blue); margin-bottom: 15px; }
-        .service-card h3 { font-size: 0.8rem; text-transform: uppercase; }
+
+        @keyframes glowMint {
+            0% { background: var(--wa-green); box-shadow: 0 0 10px var(--wa-green); color: white; }
+            100% { background: var(--mint-blue); box-shadow: 0 0 15px var(--mint-blue); color: #003322; }
+        }
 
         @keyframes softFade {
             0%, 100% { opacity: 0.3; transform: scale(0.98); }
@@ -113,7 +127,6 @@
             .hero-section { height: 60vh; } 
             .btn-grid { grid-template-columns: 1fr; gap: 15px; }
             .call-now-fixed { top: 10px; right: 10px; padding: 10px 15px; font-size: 0.7rem; }
-            .main-content { padding-top: 20px; }
         }
     </style>
 </head>
@@ -126,7 +139,7 @@
         <h1 class="welcome-text">MIRË SE VINI</h1>
     </div>
 
-    <a href="tel:+38345627222" class="call-now-fixed"><i class="fas fa-phone-alt"></i> THIRRË TANI</a>
+    <a href="tel:+38345627222" class="call-now-fixed"><i class="fas fa-phone-alt"></i> THIRR TANI</a>
 
     <div class="bg-container">
         <div class="overlay"></div>
@@ -137,22 +150,27 @@
 
     <main class="main-content">
         <section class="hero-section">
-            <img src="https://i.ibb.co/fYmJZYyb/IMG-5454.png" alt="Logo" class="logo">
+            <img src="https://i.ibb.co/fYmJZYyb/IMG-5454.png" alt="MEGZONI Logo" class="logo">
             <div class="title-box">
-                <h2 class="fade-title">FLUTURIMË DIREKTË NGA PRISHTINA<br>DHE ANASJELLTAS</h2>
+                <h1 class="fade-title">FLUTURIMË DIREKTË NGA PRISHTINA<br>DHE ANASJELLTAS</h1>
             </div>
         </section>
 
         <section class="content-block">
             <div class="btn-grid" id="dest-grid"></div>
 
+            <div class="about-section">
+                <h2>RRETH NESH</h2>
+                <p>MEGZONI është partneri juaj i besueshëm në rrugëtimet tuaja. Me një eksperiencë të gjatë në industrinë e turizmit, ne jemi të përkushtuar të ofrojmë zgjidhje të shpejta dhe cilësore për çdo udhëtar. Nga biletat e avionit e deri te asistenca mjekësore dhe përkthimet profesionale, ne kujdesemi që çdo detaj i udhëtimit tuaj të jetë i përkryer.</p>
+            </div>
+
             <div class="services-section">
                 <h2 class="services-header">SHËRBIMET TONA</h2>
                 <div class="services-grid">
                     <div class="service-card"><i class="fas fa-ticket-alt"></i><h3>Bileta Avioni</h3></div>
-                    <div class="service-card"><i class="fas fa-file-signature"></i><h3>Formularë</h3></div>
+                    <div class="service-card"><i class="fas fa-file-signature"></i><h3>Plotësim Formularësh</h3></div>
                     <div class="service-card"><i class="fas fa-hotel"></i><h3>Rezervime Hotele</h3></div>
-                    <div class="service-card"><i class="fas fa-hand-holding-medical"></i><h3>Rezervime Mjekësore</h3></div>
+                    <div class="service-card"><i class="fas fa-hand-holding-medical"></i><h3>Asistencë Mjekësore</h3></div>
                     <div class="service-card"><i class="fas fa-language"></i><h3>Përkthime Profesionale</h3></div>
                 </div>
             </div>
@@ -167,7 +185,7 @@
         cities.forEach(city => {
             const a = document.createElement('a');
             a.className = 'flight-btn';
-            a.href = `https://wa.me/${phone}?text=Dua%20rezervim%20per%20${city}`;
+            a.href = `https://wa.me/${phone}?text=Përshëndetje Elite Travel, dua rezervim për fluturimin drejt ${city}.`;
             a.target = "_blank";
             a.innerHTML = `<span>PRISHTINË ✈ ${city.toUpperCase()}</span><div class="wa-icon"><i class="fab fa-whatsapp"></i></div>`;
             grid.appendChild(a);
